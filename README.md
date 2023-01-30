@@ -12,3 +12,13 @@ Run the docker-compose file on kafkaInstallation folder using
 docker-compose up
 ```
 
+Access the react-client by accessing *localhost:3000* on the browser
+
+To view the kafka messages being sent to the react-client through the python ws server Kafka needs to receive the messages from somewhere, this project has an emitter which sends the message to kafka. 
+To run the emitter use
+
+```
+pip install kafka-python
+python kafkaGoogleMapsReactTryout/emitter.py
+```
+For safety do the above on a venv
