@@ -1,0 +1,10 @@
+FROM python:3-bullseye
+
+COPY ./requirements.txt ./requirements.txt
+RUN pip install -r requirements.txt
+
+COPY ./server.py server.py
+
+EXPOSE 9696
+
+CMD ["python", "-u", "server.py"]
